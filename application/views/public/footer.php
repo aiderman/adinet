@@ -1,55 +1,68 @@
    <!-- footer -->
+   <div class="container">
+       <div class="row">
+           <a href="https://wa.me/+6285399595243?text=Halo%20min,%20saya%20ingin%20order" id="orderButton" target="_blank">
+               <img src="<?= base_url() ?>assets/img/admini-wa.png" alt="Order via WhatsApp" style="width: 260px; height: 260px;">
+           </a>
+       </div>
+   </div>
    <footer style="background-image: url('<?= base_url() ?>bgfoodicon.png');">
        <div class="container-fluid">
            <div class="row p-3-vh">
                <div class="col-md-4 centered">
                    <div class="foo-cont">
                        <div class="title">Our Address</div>
-                       <div class="detail">249 Bueno Porto Building, 2nd floor<br> La Vista Street, Italy</div>
+                       <div class="detail">Perumahan Holy Lestari Blok G 1/4,<br> Kombos Tim., Kec. Singkil. Manado</div>
                        <a class="btn" href="<?= base_url(); ?>assets/#">View on Map</a>
                    </div>
                </div>
 
                <div class="col-md-4">
-                   <div class="foo-reserv">
-                       <div class="title">Make Reservation</div>
+                   <div class="foo-reserv" style="align-items: center; text-orientation: none;color: inherit; ">
+                       <div class="title">Contact us</div>
                        <div class="detail">
                            <div class="list">
-                               <span class="day">Week Days</span>
-                               <span class="time">09:00 AM - 21:00 PM</span>
+                               <span class="day">WA</span>
+                               <span class="time">
+                                   <a href="https://wa.me/+6285399595243?text=Halo%20min,%20saya%20ingin%20order">085399595243</a>
+                               </span>
                            </div>
-                       </div>
-                       <div class="detail">
                            <div class="list">
-                               <span class="day">Saturday</span>
-                               <span class="time">12:00 AM - 00:00 AM</span>
+                               <span class="day">tiktok</span>
+                               <span class="time">
+                                   <a href="https://www.tiktok.com/@js_kitchen.manado">js_kitchen.manado</a>
+                               </span>
                            </div>
-                       </div>
-                       <div class="detail pb-1">
                            <div class="list">
-                               <span class="day">Sunday</span>
-                               <span class="time">11:00 AM - 22:00 PM</span>
+                               <span class="day">FB</span>
+                               <span class="time">
+                                   <a href="https://www.facebook.com/profile.php?id=61573210885112">J’S Kitchen</a>
+                               </span>
+                           </div>
+                           <div class="list">
+                               <span class="day">IG</span>
+                               <span class="time">
+                                   <a href="https://www.instagram.com/js_kitchen.manado/?hl=id">js_kitchen.manado</a>
+                               </span>
                            </div>
                        </div>
-                       <a class="btn-content mt-4" data-toggle="modal" data-target="#resevmodal" href="<?= base_url(); ?>assets/#">
-                           <span class="shine"></span>
-                           BOOK NOW
-                       </a>
                    </div>
                </div>
 
                <div class="col-md-4 centered">
                    <div class="foo-cont">
-                       <div class="title">Contact Us</div>
-                       <div class="detail">Email: enquiries@dbento.com<br> Phone: 04 987654321</div>
-                       <a class="btn mb-0" href="<?= base_url(); ?>assets/#">SEND MESSAGE</a>
+                       <div class="title">Colaboration</div>
+                       <a href="https://wa.me/+6285399595243?text=Halo%20min,%20saya%20ingin%20order"><br></a>
+                       <a href="https://www.tiktok.com/@js_kitchen.manado"><br></a>
+                       <a href="https://www.facebook.com/profile.php?id=61573210885112"><br> </a>
+                       <a href="https://www.instagram.com/js_kitchen.manado/?hl=id"><br> </a>
                    </div>
                </div>
            </div>
        </div>
    </footer>
    <div class="subfooter">
-       <span>Copyright©2025 Aiderman All Rights Reserved.</span>
+       <span>Copyright©2025 adinet All Rights Reserved.</span>
    </div>
    <!-- container-wrapper end -->
 

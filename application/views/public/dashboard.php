@@ -1,32 +1,39 @@
+<?php $this->load->view("public/headerLink"); ?>
 <?php $this->load->view("public/header"); ?>
 
-<!-- Revolution Slider -->
-<section class="no-top no-bottom" aria-label="section-slider">
-    <div class="fullwidthbanner-container">
-        <div id="revolution-slider-full">
-            <ul>
-                <li data-transition="fade" data-slotamount="10" data-masterspeed="1200" data-delay="5000">
-                    <img src="<?= base_url() ?>assets/images-slider/1.jpg" alt="" data-start="0" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="100" data-bgpositionend="center center" />
-                </li>
-                <li data-transition="fade" data-slotamount="10" data-masterspeed="1200" data-delay="5000">
-                    <img src="<?= base_url() ?>assets/images-slider/2.jpg" alt="" data-start="0" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="100" data-bgpositionend="center center" />
-                    <div class="tp-caption slide-big-heading sft" data-x="center" data-y="50" data-speed="800" data-start="400" data-easing="easeInOutExpo" data-endspeed="400">
-                        <img src="<?= base_url() ?>assets/img/logo.png" alt="Logo" style="max-width: 300px; margin-top: 115px; height: auto;" />
-                    </div>
-                    <div class="tp-caption slide-sub-heading sft" data-x="center" data-y="350" data-speed="1000" data-start="800" data-easing="easeOutExpo" data-endspeed="400">
-                    </div>
-                </li>
-            </ul>
-            <div class="tp-bannertimer hide"></div>
+<!-- breadcumb -->
+<section class="breadcumb" aria-label="breadcumb" style="background-image: url('<?= base_url(); ?>assets/images-slider/7.jpg');">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="main">
+
+                    <img class="img-fluid" style="height: 30%; margin-top: 245px;" src="<?= base_url(); ?>assets/img/logo.png">
+
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<!-- Revolution Slider End -->
+<!-- breadcumb end -->
 
 <!-- Section Home -->
 <section aria-label="section" class="s-bot" style="background-color: #FBF4DB;">
     <div class="container-fluid">
         <div class="row p-3-vh">
+            <div class="col-12 text-center">
+                <div class="main-content">
+                    <div class="heading">
+                        <div class="title l-1">
+                            Reservation
+                        </div>
+                    </div>
+                    <div class="desc m-auto">
+                        Everyone has taste, even if they don't realize it. Even if you're not a great chef,
+                        there's nothing to stop you understanding the difference between what taste good and what doesn't.
+                    </div>
+                </div>
+            </div>
             <div class="col-md-12 " style="background-color:#EFDCAB; color:#834634; padding-block: 100px; border-radius: 50px; ">
                 <form>
                     <div class="form-row align-items-center font-weight-bold">
@@ -57,18 +64,17 @@
     <div class="container">
         <div class="row align-items-left">
             <div class="col-sm">
-                <button class="btn btn-secondary btn-lg btn-block" style="background-color:#dfa13c;" onclick="updateTable('1')">Paket 1</button>
-                <button class="btn btn-secondary btn-lg btn-block" style="background-color:#dfa13c;" onclick="updateTable('2')">Paket 2</button>
-                <button class="btn btn-secondary btn-lg btn-block" style="background-color:#dfa13c;" onclick="updateTable('3')">Paket 3</button>
+                <button class="btn btn-secondary btn-lg btn-block " style="background-color:#dfa13c; " onclick="updateTable('1')">Paket 1</button>
+                <button class="btn btn-secondary btn-lg btn-block " style="background-color:#dfa13c;" onclick="updateTable('2')">Paket 2</button>
+                <button class="btn btn-secondary btn-lg btn-block " style="background-color:#dfa13c; " onclick="updateTable('3')">Paket 3</button>
             </div>
             <div class="col-9">
                 <table class="table table-bordered" id="dataTable">
                     <thead>
                         <tr>
-                            <th>Label</th>
-                            <th>Harga</th>
+                            <th>No.</th>
                             <th>Nama Makanan</th>
-                            <th>Paket Group</th>
+                            <th>Harga</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -80,34 +86,10 @@
 
         </div>
     </div>
-
+    <!-- Gambar untuk order via WhatsApp -->
 </section>
 <!-- Section Home End -->
 
-<script>
-    // Data paket untuk mengisi tabel
-    const packageData = <?= json_encode($allItem); ?>; // Mengambil data dari PHP ke JavaScript
-
-    // Fungsi untuk memperbarui tabel berdasarkan paket yang dipilih
-    function updateTable(packageID) {
-        const tableBody = document.querySelector('#dataTable tbody');
-        tableBody.innerHTML = ''; // Kosongkan tabel sebelumnya
-
-        packageData.forEach(row => {
-            if (row.id_paket == packageID) {
-                const tableRow = document.createElement('tr');
-
-                // Isi detail dari baris paket
-                tableRow.innerHTML = `
-                    <td>${row.label}</td>
-                    <td>${parseFloat(row.price).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })}</td>
-                    <td>${row.food_name}</td>
-                    <td>${row.paket_group}</td>
-                `;
-                tableBody.appendChild(tableRow);
-            }
-        });
-    }
-</script>
+<?php $this->load->view("public/script") ?>
 
 <?php $this->load->view("public/footer"); ?>
